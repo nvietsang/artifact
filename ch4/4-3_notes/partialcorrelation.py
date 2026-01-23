@@ -43,7 +43,7 @@ def main(config):
 
 
     distribution = []
-    for k0 in tqdm(range(3)):
+    for k0 in tqdm(range(nk)):
         d = []
         for n in range(nn):
             n0 = (n >> (3*nd)) & mask
@@ -64,13 +64,19 @@ def main(config):
         count = len(key_groups[i])
         print(f"> total {count}")
 
-    print(f"Saving to kgroups_{nd}b.pkl")
-    with open(f"kgroups_{nd}b.pkl", "wb") as f: pickle.dump(key_groups, f)
+    print("[Figure 4.4, page54]")
+    print("These are the indexes of light blue cells for each row in the upper triangle of the matrix")
+    print("For example:")
+    print(" 60: 61 (0.50) 62 (0.50)")
+    print("This means that in row 60, the two indexes 61 and 62 are light blue cells (correlation of 0.5).")
+    print("The lower triangle is symmetric to the upper.")
+    # print(f"Saving to kgroups_{nd}b.pkl")
+    # with open(f"kgroups_{nd}b.pkl", "wb") as f: pickle.dump(key_groups, f)
 
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument('-d',
+    parser.add_argument('--n-bits-selection-function',
                         dest="nd",
                         help="Number of bits for the selection function",
                         required=True,
