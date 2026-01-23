@@ -1,0 +1,16 @@
+time python3.10 main.py --task 0\
+                      --selection-function z0\
+                      --n-bits-selection-function 2\
+                      --target-key k0\
+                      --first-subkey-index 0 2 4 8 18 25 34 38 40 42 48 50 52 55\
+                      --n-rank 8\
+                      --n-traces 10000\
+                      --n-repetition 1\
+                      --space 10000\
+                      --path-to-traces ../armv6/traces4\
+                      --start-sample 0\
+                      --end-sample 1000\
+                      --step 250\
+                      --data-type float64\
+                      --path-to-nonces ../armv6/nonces4.npy\
+                      --path-to-checkpoints ../armv6/checkpoints4\
