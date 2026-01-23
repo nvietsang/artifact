@@ -71,7 +71,7 @@ def main(config):
     print("This means that in row 60, the two indexes 61 and 62 are light blue cells (correlation of 0.5).")
     print("The lower triangle is symmetric to the upper.")
     # print(f"Saving to kgroups_{nd}b.pkl")
-    # with open(f"kgroups_{nd}b.pkl", "wb") as f: pickle.dump(key_groups, f)
+    with open(f"outputs/parcord2.pkl", "wb") as f: pickle.dump(key_groups, f)
 
 
 if __name__ == "__main__":
