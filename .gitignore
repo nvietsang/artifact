@@ -1,0 +1,21 @@
+*.txt
+*.o
+*.d
+*.npy
+*.pkl
+*.png
+*.pyc
+__pycache__
+.DS_Store
+key*
+main
+
+# CWLite
+objdir-*
+*.bin
+*.eep
+*.elf
+*.hex
+*.lss
+*.map
+*.sym
