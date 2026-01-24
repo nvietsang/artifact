@@ -1,8 +1,10 @@
 import numpy as np
 
+# Reference: https://doi.org/10.1007/s13389-016-0122-9
 def pearson_v3(n, s1, s2, s3, s4, s5):
     return (n*s5 - s1*s3) / np.sqrt((n*s2 - s1**2)*(n*s4 - s3**2))
 
+# Reference: https://doi.org/10.1007/s13389-016-0122-9
 def pearson_v5(n, s01, s02, s03, s04, s05, s06, s07, s08, s09, s10, s11, s12, s13):
     lambda1 = s10 - (s01*s07 + s02*s05)/n + (s01*s02*s03)/(n*n)
     lambda2 = s04 - (s01*s02)/n

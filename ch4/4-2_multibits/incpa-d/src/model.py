@@ -122,8 +122,8 @@ def load_guess_matrix_z(config, indexes, delta):
     
     for j, i in enumerate(indexes):
         non  = nonces[i]
-        non0 = bytes_to_u64(list(non[:8]))
-        non1 = bytes_to_u64(list(non[8:]))
+        non0 = bytes_to_u64(non[:8].tolist())
+        non1 = bytes_to_u64(non[8:].tolist())
 
         n0 = trim_tuple(config, non0)
         n1 = trim_tuple(config, non1)
