@@ -19,7 +19,7 @@ def ranking_cpa(rho, nr=5):
 
 
 if __name__ == "__main__":
-    path_to_checkpoints = "checkpoints0/k0/z0/b2/55/00/1"
+    path_to_checkpoints = "checkpoints/k0/z0/b2/55/00/1"
     path_to_kgroups = "outputs/parcord2.pkl"
 
     with open(path_to_kgroups, "rb") as f: kgroups = pickle.load(f)
@@ -31,6 +31,7 @@ if __name__ == "__main__":
     k_ref = 23
     rhocp = np.abs(cp['rho'])
 
+    print("[Table 4.6, page 55]")
     ranking = ranking_cpa(rhocp, nr=64)
     for r, item in enumerate(ranking):
         if r % 16 == 0:

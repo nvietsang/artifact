@@ -17,6 +17,7 @@ cd ..
 echo "Done! Check out the file 'faultingrcon.txt' and 'fcpts.txt' in the folder 'outputs'."
 
 echo
+echo "[Attack path, page 87]"
 echo "Recovering the key by differential fault analysis..."
-python3.10 keyrecovery.py > outputs/keyrecovery.txt
+python3 keyrecovery.py > outputs/keyrecovery.txt
 echo "Done! Check out the file 'keyrecovery.txt' in the folders 'outputs'."

@@ -72,9 +72,9 @@ if __name__ == "__main__":
     ands2    = open("../5-3_ineffective-proba/outputs/foutputs_ANDs2.txt", "r").readlines()
     nots1    = open("../5-3_ineffective-proba/outputs/foutputs_NOTs1.txt", "r").readlines()
     nots2    = open("../5-3_ineffective-proba/outputs/foutputs_NOTs2.txt", "r").readlines()
-    nonces   = open("nonces.txt"  , "r").readlines()
+    nonces   = open("outputs/nonces.txt"  , "r").readlines()
 
-    progress = [i for i in range(5, 3800+1, 5)]
+    progress = [i for i in range(5, 3500+1, 5)]
 
     nsxors1 = compare(xors1, coutputs)
     nsxors2 = compare(xors2, coutputs)

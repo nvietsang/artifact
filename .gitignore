@@ -1,8 +1,13 @@
 *.txt
+!ch6/6-4_expfrcon/plts.txt
+!ch6/6-4_expfrcon/ccpts.txt
+!ch6/6-4_expfrcon/fcpts.txt
 *.o
 *.d
 *.npy
 *.pkl
+!ch4/4-3_notes/checkpoints/k0/z0/b2/55/00/1/*.pkl
+!ch3/3-4_so-attack/saved-checkpoint/*.pkl
 *.png
 *.pyc
 __pycache__

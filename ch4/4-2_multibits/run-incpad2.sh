@@ -1,5 +1,10 @@
 mkdir -p outputs
 
+if [ ! -d "../data" ]; then
+    echo "Error: ../data does not exist"
+    exit 1
+fi
+
 cd incpa-d
 
 echo "Running incremental CPA on 5 different datasets for parameters:"
@@ -8,7 +13,7 @@ echo "d = 2 (2-bit selection function)"
 echo
 echo "Recovering k0 on dataset 1"
 echo "This takes about 10 minutes..."
-python3.10 main.py --task 0\
+python3 main.py --task 0\
                    --selection-function z0\
                    --n-bits-selection-function 2\
                    --target-key k0\
@@ -26,7 +31,7 @@ python3.10 main.py --task 0\
                    --path-to-checkpoints ../outputs/checkpoints0 > /dev/null 2>&1
 echo "Recovering k1 on dataset 1"
 echo "This takes about 10 minutes..."
-python3.10 main.py --task 0\
+python3 main.py --task 0\
                      --selection-function z1\
                      --n-bits-selection-function 2\
                      --target-key k1\
@@ -47,7 +52,7 @@ echo "Done! The logs are written to 'checkpoints0' in the folder 'outputs'."
 echo
 echo "Recovering k0 on dataset 2"
 echo "This takes about 10 minutes..."
-python3.10 main.py --task 0\
+python3 main.py --task 0\
                    --selection-function z0\
                    --n-bits-selection-function 2\
                    --target-key k0\
@@ -65,7 +70,7 @@ python3.10 main.py --task 0\
                    --path-to-checkpoints ../outputs/checkpoints1 > /dev/null 2>&1
 echo "Recovering k1 on dataset 2"
 echo "This takes about 10 minutes..."
-python3.10 main.py --task 0\
+python3 main.py --task 0\
                      --selection-function z1\
                      --n-bits-selection-function 2\
                      --target-key k1\
@@ -86,7 +91,7 @@ echo "Done! The logs are written to 'checkpoints1' in the folder 'outputs'."
 echo
 echo "Recovering k0 on dataset 3"
 echo "This takes about 10 minutes..."
-python3.10 main.py --task 0\
+python3 main.py --task 0\
                    --selection-function z0\
                    --n-bits-selection-function 2\
                    --target-key k0\
@@ -104,7 +109,7 @@ python3.10 main.py --task 0\
                    --path-to-checkpoints ../outputs/checkpoints2 > /dev/null 2>&1
 echo "Recovering k1 on dataset 3"
 echo "This takes about 10 minutes..."
-python3.10 main.py --task 0\
+python3 main.py --task 0\
                      --selection-function z1\
                      --n-bits-selection-function 2\
                      --target-key k1\
@@ -125,7 +130,7 @@ echo "Done! The logs are written to 'checkpoints2' in the folder 'outputs'."
 echo
 echo "Recovering k0 on dataset 4"
 echo "This takes about 10 minutes..."
-python3.10 main.py --task 0\
+python3 main.py --task 0\
                    --selection-function z0\
                    --n-bits-selection-function 2\
                    --target-key k0\
@@ -143,7 +148,7 @@ python3.10 main.py --task 0\
                    --path-to-checkpoints ../outputs/checkpoints3 > /dev/null 2>&1
 echo "Recovering k1 on dataset 4"
 echo "This takes about 10 minutes..."
-python3.10 main.py --task 0\
+python3 main.py --task 0\
                      --selection-function z1\
                      --n-bits-selection-function 2\
                      --target-key k1\
@@ -164,7 +169,7 @@ echo "Done! The logs are written to 'checkpoints3' in the folder 'outputs'."
 echo
 echo "Recovering k0 on dataset 5"
 echo "This takes about 10 minutes..."
-python3.10 main.py --task 0\
+python3 main.py --task 0\
                    --selection-function z0\
                    --n-bits-selection-function 2\
                    --target-key k0\
@@ -182,7 +187,7 @@ python3.10 main.py --task 0\
                    --path-to-checkpoints ../outputs/checkpoints4 > /dev/null 2>&1
 echo "Recovering k1 on dataset 5"
 echo "This takes about 10 minutes..."
-python3.10 main.py --task 0\
+python3 main.py --task 0\
                      --selection-function z1\
                      --n-bits-selection-function 2\
                      --target-key k1\

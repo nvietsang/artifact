@@ -65,5 +65,5 @@ echo "Done! Check out the file 'foutputs_XORs2.txt' in the folder 'outputs'"
 echo
 echo "[Table 5.4, page 67]"
 echo "Calculating the empirical probability of ineffective faults..."
-python3.10 proba.py > outputs/proba.txt
+python3 proba.py > outputs/proba.txt
 echo "Done! Check out the file 'proba.txt' in the folder 'outputs'"
